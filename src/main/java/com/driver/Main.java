@@ -1,8 +1,7 @@
 package com.driver;
 
 public class Main {
-    public class Product {
-
+    public static class Product {
         public int product(int x, int y) {
             return x * y;
         }
@@ -14,12 +13,10 @@ public class Main {
         public double product(double x, double y) {
             return x * y;
         }
-
     }
 
     public static void main(String[] args) {
-        Main main = new Main();
-        Product p = main.new Product();
+        Product p = new Product();
 
         int result1 = p.product(2, 3);
         System.out.println("Result of product(int, int): " + result1);
