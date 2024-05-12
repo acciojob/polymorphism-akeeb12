@@ -1,36 +1,33 @@
-
 package com.driver;
-public class Main {
-    class Product{
 
-        public int product(int x, int y)
-        {
-          return  x * y;
-        }
-        public int product(int x, int y, int z)
-        {
-            return x * y * z;
-        }
-        public double product(double x, double y)
-        {
+public class Main {
+    public class Product {
+
+        public int product(int x, int y) {
             return x * y;
         }
 
-}
+        public int product(int x, int y, int z) {
+            return x * y * z;
+        }
 
-        public static <P> void main(String[] args)
-        {
-            Main main = new Main();
-            Product p = main.new Product();
+        public double product(double x, double y) {
+            return x * y;
+        }
 
-            int result1 = p.product(2 ,3);
-            // String result1;
-            System.out.println("Result of product(int : int):" + result1);
-
-            int result2 = p.product(2, 3, 4);
-            System.out.println("Result of product(int, int, int): " + result2);
-
-            double result3 = p.product(2.5, 3.5);
-            System.out.println("Result of product(double, double):" + result3);
-        } 
     }
+
+    public static void main(String[] args) {
+        Main main = new Main();
+        Product p = main.new Product();
+
+        int result1 = p.product(2, 3);
+        System.out.println("Result of product(int, int): " + result1);
+
+        int result2 = p.product(2, 3, 4);
+        System.out.println("Result of product(int, int, int): " + result2);
+
+        double result3 = p.product(2.5, 3.5);
+        System.out.println("Result of product(double, double): " + result3);
+    }
+}
